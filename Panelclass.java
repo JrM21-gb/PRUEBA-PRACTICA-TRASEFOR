@@ -30,6 +30,7 @@ public class Panelclass extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        escritorio = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         cerrarsesion = new javax.swing.JMenuItem();
@@ -39,6 +40,17 @@ public class Panelclass extends javax.swing.JFrame {
         btnadmin = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
+        escritorio.setLayout(escritorioLayout);
+        escritorioLayout.setHorizontalGroup(
+            escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        escritorioLayout.setVerticalGroup(
+            escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 277, Short.MAX_VALUE)
+        );
 
         jMenu1.setText("Sistema");
 
@@ -86,32 +98,31 @@ public class Panelclass extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(escritorio)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
+            .addComponent(escritorio)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnadminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnadminActionPerformed
-        // TODO add your handling code here:
+       
+        ClientesAdmin ed = new ClientesAdmin();
+       escritorio.add(ed);
+       ed.show();
     }//GEN-LAST:event_btnadminActionPerformed
 
     private void cerrarsesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrarsesionActionPerformed
-      int resp = JOptionPane.showConfirmDialog (null,
-                "¿Desea cerrar sesión?","ALERTA", JOptionPane.YES_NO_OPTION);
-        if (resp== JOptionPane.YES_OPTION);
-        Loginclass ll = new Loginclass();
-        ll.setVisible(true);
-        this.dispose();
-                    
-                
-            
-                    
-                
+     int resp = JOptionPane.showConfirmDialog (null,"¿Desea cerrar sesión?","ALERTA", JOptionPane.YES_NO_OPTION);
+         
+              if (resp == JOptionPane.YES_OPTION){;
+              Loginclass ls = new Loginclass();
+              ls.setVisible(true);
+              this.dispose();
+              }
     }//GEN-LAST:event_cerrarsesionActionPerformed
 
     private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed
@@ -124,9 +135,9 @@ public class Panelclass extends javax.swing.JFrame {
     }//GEN-LAST:event_btnsalirActionPerformed
 
     private void btnagregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnagregarActionPerformed
-        ClientesAgregar ca = new ClientesAgregar ();
-        ca.setVisible(true);
-        this.dispose();
+       ClientesAgregar ca = new ClientesAgregar();
+       escritorio.add(ca);
+       ca.show();
         
         
         
@@ -172,6 +183,7 @@ public class Panelclass extends javax.swing.JFrame {
     private javax.swing.JMenuItem btnagregar;
     private javax.swing.JMenuItem btnsalir;
     private javax.swing.JMenuItem cerrarsesion;
+    private javax.swing.JDesktopPane escritorio;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;

@@ -12,7 +12,7 @@ package vistas;
 public class ClientesEditar extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form ClientesEditar
+     * Creates new form ClientesAdmin
      */
     public ClientesEditar() {
         initComponents();
@@ -27,27 +27,15 @@ public class ClientesEditar extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jScrollBar1 = new javax.swing.JScrollBar();
         jLabel1 = new javax.swing.JLabel();
+
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("sansserif", 0, 24)); // NOI18N
         jLabel1.setText("Clientes");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(jLabel1)
-                .addContainerGap(287, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(270, Short.MAX_VALUE))
-        );
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 6, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -55,5 +43,7 @@ public class ClientesEditar extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollBar jScrollBar1;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
